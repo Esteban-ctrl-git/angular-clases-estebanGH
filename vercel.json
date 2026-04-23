@@ -1,15 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "dist/angular-clases/browser/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/dist/angular-clases/browser/index.html"
-    }
+  "rewrites": [
+    { "source": "^(?!.*\\.).*$", "destination": "/index.html" }
   ]
 }
